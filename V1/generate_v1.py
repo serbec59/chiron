@@ -7,6 +7,14 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
+auto_generate = False
+num_lines = 0
+iso_date = None
+iso_time = None
+email_enabled = False
+email_address = None
+
+
 def generate_random_french_phone_number():
     prefixes = ["06", "07"]
     prefix = random.choice(prefixes)
@@ -78,12 +86,7 @@ def main():
     print("4. Choisir l'heure (aléatoire ou fixe)")
     print("5. Sortie")
     
-    auto_generate = False
-    num_lines = 0
-    iso_date = None
-    iso_time = None
-    email_enabled = False
-    email_address = None
+    
 
     while True:
         option = input("Choisissez une option : ")
